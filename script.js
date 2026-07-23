@@ -175,20 +175,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // 5. LIGHTBOX MODAL CONTROLLER
 // ==========================================
 function openLightbox(imageSrc) {
-  const modal = document.getElementById('lightboxModal');
-  const modalImg = document.getElementById('lightboxImage');
-  if (modal && modalImg) {
-    modalImg.src = imageSrc;
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImage');
     modal.classList.remove('hidden');
+    modalImg.src = imageSrc;
   }
-}
 
-function closeLightbox() {
-  const modal = document.getElementById('lightboxModal');
-  if (modal) {
+  function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
     modal.classList.add('hidden');
   }
-}
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
